@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Virtual env
+.venv/
+
+# Logs
+*.log
+
+# Ignore CSV exports but keep DuckDB database files
+out/duckdb_export/*.csv
