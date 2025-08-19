@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "Customer dimension with parsed creation date."
+    columns:
+      - name: customer_id
+        tests: [not_null, unique]
+      - name: branch_id
+        tests: [not_null]
+      - name: firstname
+      - name: lastname
+      - name: city
+      - name: creation_date
+
+  - name: dim_currency
+    description: "Normalized currency codes drawn from fx rates and transactions (EUR enforced)."
+    columns:
+      - name: currency_code
+        tests: [not_null, unique]

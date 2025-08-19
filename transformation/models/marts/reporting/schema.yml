@@ -1,0 +1,16 @@
+version: 2
+models:
+  - name: fct_transactions_eur_daily
+    columns:
+      - name: customer_id
+        tests: [not_null]
+      - name: account_id
+        tests: [not_null]
+      - name: branch_id
+        tests: [not_null]
+      - name: transaction_date
+        tests: [not_null]
+      - name: total_amount_eur
+        tests: [not_null]
+      - name: txn_count
+        tests: [not_null]

@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: dim_account
+    columns:
+      - name: account_id
+        tests: [not_null, unique]
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_id
