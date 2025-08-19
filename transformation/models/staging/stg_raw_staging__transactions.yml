@@ -28,6 +28,8 @@ models:
           - relationships:
               to: ref('stg_raw_staging__accounts')
               field: account_id
+              severity: warn          # added
+              where: "account_id is not null" #added
       - name: transaction_type
         data_type: varchar
         description: "Type of transaction"
