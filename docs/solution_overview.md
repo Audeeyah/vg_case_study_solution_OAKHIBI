@@ -45,7 +45,7 @@
   - `dim_account.csv`, `dim_customer.csv`, `dim_branch.csv`, `dim_currency.csv`, `dim_date.csv`
   - `fct_transactions_eur_daily.csv`
   - *(diagnostic)* `orphan_transactions_counts.csv`
-- **Connection:** Power BI → **Get data → Folder** → point to `out/duckdb_export/`.  
+- **Connection:** Power BI → **Get data → Text/csv** → points to `out/duckdb_export/`.  
   Use “Combine” and retain separate queries per file. Refresh picks up updated CSVs.
 
 ---
@@ -64,7 +64,7 @@
 - dbt tests on keys/relationships/accepted values across staging & marts.  
 - Additional diagnostics exported:
   - `orphan_transactions_counts.csv` — surfaces integrity gaps for the business.
-- We **retain** problematic records (date parsing failures, orphans) with flags to avoid silent data loss.
+- We **retain** problematic records (date parsing failures, orphans) with flags to avoid data loss.
 
 ---
 
@@ -72,7 +72,7 @@
 
 - Screenshots of key report pages live in: `docs/screenshots/` (PNG).  
   Suggested names:  
-  `kpi_overview.png`, `txn_trends.png`, `customer_segmentation.png`, `orphan_txn_view.png`.
+  `Account types.png`, `Daily orphan transactions.png`, `Model view.png`, `Overview KPI.png`, `Overview KPI 2.png`, `Top 10 customers by transaction`.
 
 ---
 
