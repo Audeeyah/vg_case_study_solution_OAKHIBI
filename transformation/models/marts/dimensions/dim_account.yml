@@ -2,10 +2,13 @@ version: 2
 
 models:
   - name: dim_account
+    description: "Account dimension (deduplicated by account_id) with cleaned account_type and parsed opening date."
     columns:
       - name: account_id
+        description: "Unique ID of the account"
         tests: [not_null, unique]
       - name: customer_id
+        description: "Customer ID of the customer"
         tests:
           - not_null
           - relationships:

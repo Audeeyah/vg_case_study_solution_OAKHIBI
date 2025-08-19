@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_raw_staging__transactions
-    description: ""
+    description: "Raw transactions data with slight adjustments to cater to failed dbt test"
     columns:
       - name: transaction_id
         data_type: integer
