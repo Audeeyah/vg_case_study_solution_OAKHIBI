@@ -33,7 +33,7 @@
 - **Date parsing** preserved as a **flag**: `has_date_parsing_error` (instead of dropping rows).
 
 ### Orphan transactions
-- 9 `account_id`s referenced by transactions don’t exist in Account master.
+- 9 `account_id`are referenced by transactions don’t exist in Account master.
 - Kept in the fact table; flagged in Power BI with an **Orphan** slicer to quantify and triage.
 
 ---
@@ -42,7 +42,7 @@
 
 - **Export source:** dbt/DuckDB writes CSVs to **`out/duckdb_export/`**  
   Files:
-  - `dim_account.csv`, `dim_customer.csv`, `dim_branch.csv`, `dim_currency.csv`, `dim_date.csv`
+  - `dim_account.csv`, `dim_customer.csv`
   - `fct_transactions_eur_daily.csv`
   - *(diagnostic)* `orphan_transactions_counts.csv`
 - **Connection:** Power BI → **Get data → Text/csv** → points to `out/duckdb_export/`.  
@@ -54,7 +54,7 @@
 
 - **Star schema in Power BI**
   - Fact: `fct_transactions_eur_daily` (many)  
-  - Dims: `dim_account` (one) → `dim_customer`, `dim_branch`, `dim_date`, `dim_currency`
+  - Dims: `dim_account`, `dim_customer
 - **Relationships:** single-direction from dims to fact for predictable totals.
 
 ---
