@@ -1,0 +1,2 @@
+transaction_date,account_id,customer_id,branch_id,txn_count,total_amount_eur,non_eur_without_fx_rows,issue_reason
+2025-01-30,1819,1819,84,2,,2,ALL_TXN_ROWS_NON_EUR_WITHOUT_FX

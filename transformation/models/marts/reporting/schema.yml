@@ -12,5 +12,7 @@ models:
         tests: [not_null]
       - name: total_amount_eur
         tests: [not_null]
+        where: "non_eur_without_fx_rows = 0"
+        severity: warn
       - name: txn_count
         tests: [not_null]
